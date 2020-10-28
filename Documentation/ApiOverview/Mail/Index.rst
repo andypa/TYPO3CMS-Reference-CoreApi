@@ -273,6 +273,12 @@ This shows how to generate and send a mail in TYPO3::
          new Address('receiver@example.org', 'Max Mustermann'),
          new Address('other@domain.org')
       )
+      
+      // Alternatively, following syntax works as well for adding multiple recipients    
+      ->addTo(new Address('receiver@example.org', 'Max Mustermann'))
+      ->addTo(new Address('other@domain.org'))         
+      
+      
 
       // Give the message a subject
       ->subject('Your subject')
